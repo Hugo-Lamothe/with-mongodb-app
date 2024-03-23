@@ -23,16 +23,40 @@ import { ObjectId } from "mongodb";
  *       405:
  *         description: Wrong HTTP Method
  *   put:
+ *     parameters:
+ *       - in: path
+ *         name: idComment
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: ID comment
  *     requestBody:
- *       description: Endpoint for modify a comment
+ *       required: true
+ *       description: Endpoint for edit a comment
  *       content:
- *         application/x-www-form-urlencoded:
+ *         application/json:
  *           schema:
  *             type: object
  *           description:
  *     responses:
  *       201:
  *         description: Comment infos
+ *       404:
+ *         description: Comment not found
+ *       405:
+ *         description: Wrong HTTP Method
+ *   delete:
+ *     description: Returns the movies with the [idComment]
+ *     parameters:
+ *       - in: path
+ *         name: idComment
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: ID comment
+ *     responses:
+ *       200:
+ *         description: Hello Comments
  *       404:
  *         description: Comment not found
  *       405:

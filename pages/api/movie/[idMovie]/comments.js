@@ -15,7 +15,7 @@ import clientPromise from "../../../../lib/mongodb";
  *     requestBody:
  *       description: Endpoint for adding a comment
  *       content:
- *         application/x-www-form-urlencoded:
+ *         application/json:
  *           schema:
  *             type: object
  *     responses:

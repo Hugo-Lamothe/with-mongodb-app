@@ -45,6 +45,22 @@ import { ObjectId } from 'mongodb';
  *         description: Movie's not found
  *       405:
  *         description: Wrong HTTP Method
+ *   delete:
+ *     description: Returns the movies with the [idMovie]
+ *     parameters:
+ *       - in: path
+ *         name: idMovie
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: ID movie
+ *     responses:
+ *       200:
+ *         description: Hello Movie
+ *       404:
+ *         description: Movie not found
+ *       405:
+ *         description: Wrong HTTP Method
  *
  */
 export default async function handler(req, res) {
